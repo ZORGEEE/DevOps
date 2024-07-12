@@ -2,38 +2,38 @@
 
 ### 1.1. Сети и маски
 #### 1) Адрес сети *192.167.38.54/13*
-![](/src/screenshots/Part_1/l_1_1.png)
+![](/Linux%20Network/src/screenshots/Part_1/l_1_1.png)
 
 #### 2) Перевод маски *255.255.255.0* в префиксную и двоичную запись, */15* в обычную и двоичную, *11111111.11111111.11111111.11110000* в обычную и префиксную
 - `255.255.255.0 в префиксной: /24`
 - `255.255.255.0 в двоичной: 11111111.11111111.11111111.00000000`
-![](/src/screenshots/Part_1/l_1_2.png)
+![](/Linux%20Network/src/screenshots/Part_1/l_1_2.png)
 
 
 - `/15 в обычной: 255.254.0.0`
 - `/15 в двоичной: 11111111.11111110.00000000.00000000`
-![](/src/screenshots/Part_1/l_1_3.png)
+![](/Linux%20Network/src/screenshots/Part_1/l_1_3.png)
 
 
 - `11111111.11111111.11111111.11110000 в обычной: 255.255.255.240`
 - `11111111.11111111.11111111.11110000 в префиксной: /28`
-![](/src/screenshots/Part_1/l_1_4.png)
+![](/Linux%20Network/src/screenshots/Part_1/l_1_4.png)
 
 #### 3) Минимальный и максимальный хост в сети *12.167.38.4* при масках: */8*, *11111111.11111111.00000000.00000000*, *255.255.254.0* и */4*
-![](/src/screenshots/Part_1/l_1_5.png)
+![](/Linux%20Network/src/screenshots/Part_1/l_1_5.png)
 
 ### 1.2. localhost
 #### Определи и запиши в отчёт, можно ли обратиться к приложению, работающему на localhost, со следующими IP: *194.34.23.100*, *127.0.0.2*, *127.1.0.1*, *128.0.0.1*
-![](/src/screenshots/Part_1/l_1_6.png)
+![](/Linux%20Network/src/screenshots/Part_1/l_1_6.png)
 - `*194.34.23.100*: нельзя (это внешний IP)`
 
-![](/src/screenshots/Part_1/l_1_7.png)
+![](/Linux%20Network/src/screenshots/Part_1/l_1_7.png)
 - `*127.0.0.2*: можно (это локальный IP)`
 
-![](/src/screenshots/Part_1/l_1_8.png)
+![](/Linux%20Network/src/screenshots/Part_1/l_1_8.png)
 - `*127.1.0.1*: можно (это локальный IP)`
 
-![](/src/screenshots/Part_1/l_1_9.png)
+![](/Linux%20Network/src/screenshots/Part_1/l_1_9.png)
 - `*128.0.0.1*: нельзя (это внешний IP)`
 
 ### 1.3. Диапазоны и сегменты сетей
@@ -50,7 +50,7 @@
 - `192.169.168.1 - публичный`
 
 #### 2) Какие из перечисленных IP адресов шлюза возможны у сети *10.10.0.0/18*: *10.0.0.1*, *10.10.0.2*, *10.10.10.10*, *10.10.100.1*, *10.10.1.255*
-![](/src/screenshots/Part_1/l_1_10.png)
+![](/Linux%20Network/src/screenshots/Part_1/l_1_10.png)
 
 - `10.10.0.2 - возможен`
 - `10.10.10.10 - возможен`
@@ -61,43 +61,43 @@
 ### Подними две виртуальные машины (далее -- ws1 и ws2).
 ### С помощью команды `ip a` посмотри существующие сетевые интерфейсы.
 
-![](/src/screenshots/Part_2/l_2_1.png)
+![](/Linux%20Network/src/screenshots/Part_2/l_2_1.png)
 
-![](/src/screenshots/Part_2/l_2_2.png)
+![](/Linux%20Network/src/screenshots/Part_2/l_2_2.png)
 
 ### Опиши сетевой интерфейс, соответствующий внутренней сети, на обеих машинах и задать следующие адреса и маски: ws1 - *192.168.100.10*, маска */16*, ws2 - *172.24.116.8*, маска */12*.
 
-![](/src/screenshots/Part_2/l_2_3.png)
+![](/Linux%20Network/src/screenshots/Part_2/l_2_3.png)
 
-![](/src/screenshots/Part_2/l_2_5.png)
+![](/Linux%20Network/src/screenshots/Part_2/l_2_5.png)
 
 ### Выполни команду `netplan apply` для перезапуска сервиса сети.
 
-![](/src/screenshots/Part_2/l_2_4.png)
+![](/Linux%20Network/src/screenshots/Part_2/l_2_4.png)
 
-![](/src/screenshots/Part_2/l_2_6.png)
+![](/Linux%20Network/src/screenshots/Part_2/l_2_6.png)
 
 ### 2.1. Добавление статического маршрута вручную
 #### Добавь статический маршрут от одной машины до другой и обратно при помощи команды вида `ip r add`.
 #### Пропингуй соединение между машинами.
 
-![](/src/screenshots/Part_2/l_2_7.png)
+![](/Linux%20Network/src/screenshots/Part_2/l_2_7.png)
 
-![](/src/screenshots/Part_2/l_2_8.png)
+![](/Linux%20Network/src/screenshots/Part_2/l_2_8.png)
 
 ### 2.2. Добавление статического маршрута с сохранением
 #### Перезапусти машины.
 #### Добавь статический маршрут от одной машины до другой с помощью файла *etc/netplan/00-installer-config.yaml*.
 
-![](/src/screenshots/Part_2/l_2_9.png)
+![](/Linux%20Network/src/screenshots/Part_2/l_2_9.png)
 
-![](/src/screenshots/Part_2/l_2_10.png)
+![](/Linux%20Network/src/screenshots/Part_2/l_2_10.png)
 
 #### Пропингуй соединение между машинами.
 
-![](/src/screenshots/Part_2/l_2_11.png)
+![](/Linux%20Network/src/screenshots/Part_2/l_2_11.png)
 
-![](/src/screenshots/Part_2/l_2_12.png)
+![](/Linux%20Network/src/screenshots/Part_2/l_2_12.png)
 
 ## Part 3. Утилита **iperf3**
 ### 3.1. Скорость соединения
@@ -112,10 +112,10 @@
 ### 3.2. Утилита **iperf3**
 #### Измерь скорость соединения между ws1 и ws2.
 
-![](/src/screenshots/Part_3/l_3_1.png)
+![](/Linux%20Network/src/screenshots/Part_3/l_3_1.png)
 
 -`Используем ws2, как сервер:`
-![](/src/screenshots/Part_3/l_3_2.png)
+![](/Linux%20Network/src/screenshots/Part_3/l_3_2.png)
 
 ## Part 4. Сетевой экран
 
@@ -136,93 +136,93 @@ iptables -X
 #### 4) Запрети *echo reply* (машина не должна «пинговаться», т.е. должна быть блокировка на OUTPUT).
 #### 5) Разреши *echo reply* (машина должна «пинговаться»).
 
-![](/src/screenshots/Part_4/l_4_1.png)
+![](/Linux%20Network/src/screenshots/Part_4/l_4_1.png)
 
-![](/src/screenshots/Part_4/l_4_2.png)
+![](/Linux%20Network/src/screenshots/Part_4/l_4_2.png)
 
 #### Запусти файлы на обеих машинах командами `chmod +x /etc/firewall.sh` и `/etc/firewall.sh`.
 
-![](/src/screenshots/Part_4/l_4_3.png)
+![](/Linux%20Network/src/screenshots/Part_4/l_4_3.png)
 
-![](/src/screenshots/Part_4/l_4_5.png)
+![](/Linux%20Network/src/screenshots/Part_4/l_4_5.png)
 
 > Разница в стратегиях - разный порядок запуска запрещающего и разрешающего правил (выполняется первое правило, по порядку, под которое попадает пакет)
 
 #### 4.2. Утилита **nmap**
 ##### Командой **ping** найди машину, которая не «пингуется», после чего утилитой **nmap** покажи, что хост машины запущен.
 
-![](/src/screenshots/Part_4/l_4_6.png)
+![](/Linux%20Network/src/screenshots/Part_4/l_4_6.png)
 
-![](/src/screenshots/Part_4/l_4_7.png)
+![](/Linux%20Network/src/screenshots/Part_4/l_4_7.png)
 
 ## Part 5. Статическая маршрутизация сети
 
 ### 5.1. Настройка адресов машин
 #### Настраиваем конфигурации машин в etc/netplan/00-installer-config.yaml согласно сети на рисунке сайта школы с заданием.
 
-![](/src/screenshots/Part_5/l_5_1_1.png)
-![](/src/screenshots/Part_5/l_5_1_2.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_1_1.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_1_2.png)
 
 #### Перезапускаем сервис сети. Если ошибок нет, то командой ip -4 a проверь, что адрес машины задан верно.
 
-![](/src/screenshots/Part_5/l_5_1_3.png)
-![](/src/screenshots/Part_5/l_5_1_4.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_1_3.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_1_4.png)
 
 #### Также пингуем ws22 с ws21. Аналогично пингуем r1 с ws11.
 
-![](/src/screenshots/Part_5/l_5_1_5.png)
-![](/src/screenshots/Part_5/l_5_1_6.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_1_5.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_1_6.png)
 
 ### 5.2. Включение переадресации IP-адресов
 #### Для включения переадресации IP, выполняем команду на роутерах:
 
-![](/src/screenshots/Part_5/l_5_2_1.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_2_1.png)
 
 #### Открываем файл /etc/sysctl.conf и добавляем в него следующую строку:
 
-![](/src/screenshots/Part_5/l_5_2_2.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_2_2.png)
 
 ### 5.3. Установка маршрута по-умолчанию
 
 #### Настраивем маршрут по-умолчанию (шлюз) для рабочих станций:
 
-![](/src/screenshots/Part_5/l_5_3_1.png)
-![](/src/screenshots/Part_5/l_5_3_2.png)
-![](/src/screenshots/Part_5/l_5_3_3.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_3_1.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_3_2.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_3_3.png)
 
 #### Вызываем ip r и покажи, что добавился маршрут в таблицу маршрутизации:
 
-![](/src/screenshots/Part_5/l_5_3_4.png)
-![](/src/screenshots/Part_5/l_5_3_5.png)
-![](/src/screenshots/Part_5/l_5_3_6.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_3_4.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_3_5.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_3_6.png)
 
 #### Пингуем с ws11 роутер r2 и показываем на r2, что пинг доходит:
 
-![](/src/screenshots/Part_5/l_5_3_7.png)
-![](/src/screenshots/Part_5/l_5_3_8.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_3_7.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_3_8.png)
 
 ### 5.4. Добавление статических маршрутов
 #### Добавляем в роутеры r1 и r2 статические маршруты в файле конфигураций:
 
-![](/src/screenshots/Part_5/l_5_4_1.png)
-![](/src/screenshots/Part_5/l_5_4_2.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_4_1.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_4_2.png)
 
 #### Вызывааем ip r и покажи таблицы с маршрутами на обоих роутерах:
 
-![](/src/screenshots/Part_5/l_5_4_3.png)
-![](/src/screenshots/Part_5/l_5_4_4.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_4_3.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_4_4.png)
 
 #### Запускаем команды на ws11:
 
-![](/src/screenshots/Part_5/l_5_4_5.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_4_5.png)
 
         Для адреса 10.10.0.0/18 был выбран маршрут, отличный от 0.0.0.0/0, хотя он попадает под маршрут по-умолчанию, потому что это адрес сети.
 
 ### 5.5. Построение списка маршрутизаторов
 #### Запустили на r1 команду дампа: "tcpdump -tnv -i eth0" и при помощи утилиты traceroute построили список маршрутизаторов на пути от ws11 до ws21:
 
-![](/src/screenshots/Part_5/l_5_5_1.png)
-![](/src/screenshots/Part_5/l_5_5_2.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_5_1.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_5_2.png)
 
         Каждый пакет проходит на своем пути определенное количество узлов, пока достигнет своей цели. Причем, каждый пакет имеет свое время жизни. Это количество узлов, которые может пройти пакет перед тем, как он будет уничтожен. Этот параметр записывается в заголовке TTL, каждый маршрутизатор, через который будет проходить пакет уменьшает его на единицу. При TTL=0 пакет уничтожается, а отправителю отсылается сообщение Time Exceeded.
 
@@ -231,105 +231,105 @@ iptables -X
 ### 5.6. Использование протокола ICMP при маршрутизации
 #### Запускаем на r1 перехват сетевого трафика, проходящего через eth0, а также пингуем с ws11 несуществующий IP (например, 10.30.0.111):
 
-![](/src/screenshots/Part_5/l_5_6_1.png)
-![](/src/screenshots/Part_5/l_5_6_2.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_6_1.png)
+![](/Linux%20Network/src/screenshots/Part_5/l_5_6_2.png)
 
 ## Part 6. Динамическая настройка IP с помощью DHCP
 
 #### Для r2 настрой в файле /etc/dhcp/dhcpd.conf конфигурацию службы DHCP:
 #### 1) Указываем адрес маршрутизатора по-умолчанию, DNS-сервер и адрес внутренней сети:
 
-![](/src/screenshots/Part_6/l_6_1_1.png)
+![](/Linux%20Network/src/screenshots/Part_6/l_6_1_1.png)
 
 #### 2) В файле resolv.conf прописываем nameserver 8.8.8.8:
 
-![](/src/screenshots/Part_6/l_6_1_2.png)
+![](/Linux%20Network/src/screenshots/Part_6/l_6_1_2.png)
 
 ### Перезагружаем службу DHCP командой systemctl restart isc-dhcp-server. Машину ws21 перезагружаем при помощи reboot и через ip a показывыаем, что она получила адрес. Также пингуем ws22 с ws21:
 
-![](/src/screenshots/Part_6/l_6_1_4.png)
-![](/src/screenshots/Part_6/l_6_1_5.png)
+![](/Linux%20Network/src/screenshots/Part_6/l_6_1_4.png)
+![](/Linux%20Network/src/screenshots/Part_6/l_6_1_5.png)
 
 #### Указываем MAC адрес у ws11:
 
-![](/src/screenshots/Part_6/l_6_6.png)
+![](/Linux%20Network/src/screenshots/Part_6/l_6_6.png)
 
 #### Для r1 настраиваем аналогично r2, но сделаем выдачу адресов с жесткой привязкой к MAC-адресу (ws11). Проведём аналогичные тесты:
 
-![](/src/screenshots/Part_6/l_6_7.png)
-![](/src/screenshots/Part_6/l_6_8.png)
+![](/Linux%20Network/src/screenshots/Part_6/l_6_7.png)
+![](/Linux%20Network/src/screenshots/Part_6/l_6_8.png)
 
 #### Проведи аналогичные тесты.
 
-![](/src/screenshots/Part_6/l_6_9_1.png)
-![](/src/screenshots/Part_6/l_6_9_2.png)
+![](/Linux%20Network/src/screenshots/Part_6/l_6_9_1.png)
+![](/Linux%20Network/src/screenshots/Part_6/l_6_9_2.png)
 
 ### Запросим с ws21 обновление ip адреса.
 #### ip до обновления:
 
-![](/src/screenshots/Part_6/l_6_9_3.png)
+![](/Linux%20Network/src/screenshots/Part_6/l_6_9_3.png)
 
 #### ip после обновления:
 
-![](/src/screenshots/Part_6/l_6_1_1.png)
+![](/Linux%20Network/src/screenshots/Part_6/l_6_1_1.png)
 
 ## Part 7. NAT
 ### В файле /etc/apache2/ports.conf на ws22 и r1 изменяем строку Listen 80 на Listen 0.0.0.0:80, то есть сделаем сервер Apache2 общедоступным:
 
-![](/src/screenshots/Part_7/l_7_1_1.png)
-![](/src/screenshots/Part_7/l_7_1_2.png)
+![](/Linux%20Network/src/screenshots/Part_7/l_7_1_1.png)
+![](/Linux%20Network/src/screenshots/Part_7/l_7_1_2.png)
 
 ### Запуск веб-сервера Apache командой service apache2 start на ws22 и r1:
 
-![](/src/screenshots/Part_7/l_7_2.png)
+![](/Linux%20Network/src/screenshots/Part_7/l_7_2.png)
 
 ### Добавляем в фаервол, созданный по аналогии с фаерволом из Части 4, на r2 следующие правила:
 
-![](/src/screenshots/Part_7/l_7_3_1.png)
+![](/Linux%20Network/src/screenshots/Part_7/l_7_3_1.png)
 
 ### Проверяем соединение между ws22 и r1 командой ping. При запуске файла с этими правилами, ws22 не должна «пинговаться» с r1.
 
-![](/src/screenshots/Part_7/l_7_4.png)
+![](/Linux%20Network/src/screenshots/Part_7/l_7_4.png)
 
 ### Добавляем в файл ещё одно правило:
 ####  Разрешим маршрутизацию всех пакетов протокола ICMP:
 
-![](/src/screenshots/Part_7/l_7_5.png)
+![](/Linux%20Network/src/screenshots/Part_7/l_7_5.png)
 
 ### Проверяем соединение между ws22 и r1 командой ping. При запуске файла с этими правилами, ws22 должна «пинговаться» с r1:
 
-![](/src/screenshots/Part_7/l_7_6.png)
+![](/Linux%20Network/src/screenshots/Part_7/l_7_6.png)
 
 ### Включим SNAT, а именно маскирование всех локальных ip из локальной сети, находящейся за r2 (по обозначениям из Части 5 - сеть 10.20.0.0) и включаем DNAT на 8080 порт машины r2 и добавить к веб-серверу Apache, запущенному на ws22, доступ извне сети.
 
-![](/src/screenshots/Part_7/l_7_7.png)
+![](/Linux%20Network/src/screenshots/Part_7/l_7_7.png)
 
 ### Проверяем соединение по TCP для SNAT: для этого с ws22 подключиться к серверу Apache на r1 командой:
 
-![](/src/screenshots/Part_7/l_7_8_1.png)
+![](/Linux%20Network/src/screenshots/Part_7/l_7_8_1.png)
 
 ### Проверяем соединение по TCP для DNAT: для этого с r1 подключиться к серверу Apache на ws22 командой telnet (обращаться по адресу r2 и порту 8080):
 
-![](/src/screenshots/Part_7/l_7_8_2.png)
+![](/Linux%20Network/src/screenshots/Part_7/l_7_8_2.png)
 
 ## Part 8. Дополнительно. Знакомство с SSH Tunnels
 ### Запускаем на r2 фаервол с правилами из Части 7:
 
-![](/src/screenshots/Part_8/l_8_1.png)
+![](/Linux%20Network/src/screenshots/Part_8/l_8_1.png)
 
 ### Запускаем веб-сервер Apache на ws22 только на localhost:
 
-![](/src/screenshots/Part_8/l_8_2.png)
+![](/Linux%20Network/src/screenshots/Part_8/l_8_2.png)
 
 ### Воспользуемся Local TCP forwarding с ws21 до ws22, чтобы получить доступ к веб-серверу на ws22 с ws21:
 
-![](/src/screenshots/Part_8/l_8_3.png)
+![](/Linux%20Network/src/screenshots/Part_8/l_8_3.png)
 
 ### Воспользуемся Remote TCP forwarding c ws11 до ws22, чтобы получить доступ к веб-серверу на ws22 с ws11:
 #### Результат полсе использования комнады: ssh -R 8080:10.20.0.10:80 ali@localhost
 
-![](/src/screenshots/Part_8/l_8_4.png)
+![](/Linux%20Network/src/screenshots/Part_8/l_8_4.png)
 
 ### Для проверки, сработало ли подключение в обоих предыдущих пунктах, пишем:
 
-![](/src/screenshots/Part_8/l_8_5.png)
+![](/Linux%20Network/src/screenshots/Part_8/l_8_5.png)

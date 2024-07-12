@@ -6,7 +6,7 @@
 
 ==Задание==
 
-![linux_1](/src/img/linux_1.png)
+![linux_1](/Linux/src/img/linux_1.png)
 \> *результат выполнения соманды* `cat /etc/issue.`
 
 ## Part 2. Создание пользователя
@@ -15,18 +15,18 @@
 
 `-` Первый шаг - создание пользователя:
 
-![](/src/img/linux_2_1.png)
+![](/Linux/src/img/linux_2_1.png)
 
 `-` Второй шаг - добавление пользователя в группу `adm`:
 
-![](/src/img/linux_2_2.png) \
+![](/Linux/src/img/linux_2_2.png) \
 \> *флаг `-aG` позволяет добавить пользователя в новую группу, не удаляя из других.*
 
-![](/src/img/linux_2_3.png) \
+![](/Linux/src/img/linux_2_3.png) \
 \> *проверяем, что новый пользователь добавлен в группу `adm`.*
 
 `-` Третий шаг - проверяем вывод команды `cat /etc/passwd`
-![](/src/img//linux_2_4.png) \
+![](/Linux/src/img//linux_2_4.png) \
 \> *последняя строчка содержит информацию о новом пользователе*
 
 ## Part 3. Настройка сети ОС
@@ -34,104 +34,104 @@
 ==Задание==
 
 `-` Для начала меняем имя нашей linux машины
-![](/src/img/linux_3_1.png)
+![](/Linux/src/img/linux_3_1.png)
 
 `-` Устанавливаем временную зону с помощью команды `timedatectl`
-![](/src/img/linux_3_2.png)
+![](/Linux/src/img/linux_3_2.png)
 
 `-`Устанавливаем набор сетевых инструментов
-![](/src/img/linux_3_3.png)
+![](/Linux/src/img/linux_3_3.png)
 
 `-` Выводим названия сетевых интерфейсов
-![](/src/img/linux_3_4.png)
+![](/Linux/src/img/linux_3_4.png)
 
 \> *Интерфейс `lo` (Loopback) является специальным сетевым интерфейсом на компьютере, который предназначен для обратной связи с самим собой. Он является виртуальным интерфейсом и представляет собой логический сетевой интерфейс, который не связан с конкретным физическим устройством.* 
 
 `-`Получаю свой ip адрес от DHCP сервера
-![](/src/img/linux_3_5.png)\
+![](/Linux/src/img/linux_3_5.png)\
 \>`DHCP - Dynamic Host Configuration Protocol`
 
 `-`Определяю внешний ip адрес
-![](/src/img/linux_3_6.png)
+![](/Linux/src/img/linux_3_6.png)
 
 `-`Определяю внутренний ip адрес шлюза, ip адрес по умолчанию
-![](/src/img/linux_3_7.png)
+![](/Linux/src/img/linux_3_7.png)
 
 `-`Изменяю файл конфигурации сети `/etc/netplan/*.yaml`
-![](/src/img/linux_3_8.png)
+![](/Linux/src/img/linux_3_8.png)
 
 `-`Применияю изменения и перезапускаю систему
-![](/src/img/linux_3_9.png)
+![](/Linux/src/img/linux_3_9.png)
 
 `-`Проверяю что адреса соответсвют тем, которые я задал
-![](/src/img/linux_3_10.png)
+![](/Linux/src/img/linux_3_10.png)
 
 `-`Успешно пингую хост `1.1.1.1`
-![](/src/img/linux_3_11.png)
+![](/Linux/src/img/linux_3_11.png)
 
 `-`Успешно пингую хост `8.8.8.8`
-![](/src/img/linux_3_12.png)
+![](/Linux/src/img/linux_3_12.png)
 
 ## Part 4. Обновление ОС
 
 `-`Ввожу команду для обновления
-![](/src/img/linux_4_1.png)
+![](/Linux/src/img/linux_4_1.png)
 
 `-`Повторно ввожу команду, чтобы убедиться, что все обновления установлены
-![](/src/img/linux_4_2.png)
+![](/Linux/src/img/linux_4_2.png)
 
 ## Part 5. Использование команды **sudo**
 
 `-`**sudo** - позволяет временно поднимать привилегии и выполнять задачи администрирования системы с максимальными правами
 
 `-`Добавляю пользователя в группу с привлегиями `sudo`, переключаюсь на него и меняю название **hostname**
-![](/src/img/linux_5_1.png)
+![](/Linux/src/img/linux_5_1.png)
 
 ## Part 6. Установка и настройка службы времени
 
 `-`Вывожу команду с корректным временем
-![](/src/img/linux_6_1.png)
+![](/Linux/src/img/linux_6_1.png)
 
 `-`Скриншот с моей текущей датой и временем
-![](/src/img/linux_6_2.png)
+![](/Linux/src/img/linux_6_2.png)
 
 ## Part 7. Установка и использование текстовых редакторов
 
 `-`**VIM** Для сохранения и выхода нажал ESC и прописал :wq
-![](/src/img/linux_7_1.png)
+![](/Linux/src/img/linux_7_1.png)
 
 `-`**NANO** Для сохранения нажал ^O, подтвердил имя файла и вышел на ^X
-![](/src/img/linux_7_2.png)
+![](/Linux/src/img/linux_7_2.png)
 
 `-`**JOE** Для сохранения нажал ^KX и подтвердил имя файла
-![](/src/img/linux_7_3.png)
+![](/Linux/src/img/linux_7_3.png)
 
 `-`**VIM** Для выхода без сохранения ESC -> :q! -> ENTER
-![](/src/img/linux_7_4.png)
+![](/Linux/src/img/linux_7_4.png)
 
 `-`**NANO** Для выхода без сохранения ^X -> N
-![](/src/img/linux_7_5.png)
+![](/Linux/src/img/linux_7_5.png)
 
 `-`**JOE** Для выхода без сохранения ^C -> y
-![](/src/img/linux_7_6.png)
+![](/Linux/src/img/linux_7_6.png)
 
 `-`**VIM** Для поиска: /что_ищем
-![](/src/img/linux_7_7.png)
+![](/Linux/src/img/linux_7_7.png)
 
 `-`**VIM** Для замены: :s/что_заменить/чем
-![](/src/img/linux_7_8.png)
+![](/Linux/src/img/linux_7_8.png)
 
 `-`**NANO** Для поиска: ^W -> что ищем
-![](/src/img/linux_7_9.png)
+![](/Linux/src/img/linux_7_9.png)
 
 `-`**NANO** Для замены: ^\ -> что заменить -> чем -> Y
-![](/src/img/linux_7_10.png)
+![](/Linux/src/img/linux_7_10.png)
 
 `-`**JOE** Для поиска: ^K F -> что ищем -> I
-![](/src/img/linux_7_11.png)
+![](/Linux/src/img/linux_7_11.png)
 
 `-`**JOE** Для замены: ^K F -> что заменить -> R -> чем -> Y
-![](/src/img/linux_7_12.png)
+![](/Linux/src/img/linux_7_12.png)
 
 ## Part 8. Установка и базовая настройка сервиса SSHD
 
@@ -140,14 +140,14 @@
 `-`Выполнил `sudo systemctl start sshd`\
 `-`Выполнил `sudo systemctl enable ssh`\
 `-`Отобразил наличие процесса
-![](/src/img/linux_8_1.png)
+![](/Linux/src/img/linux_8_1.png)
 \> команда **ps** выводит сведения о процессах в системе\
 \> флаг **-e** позволяет выбрать все процессы\
 \> **| grep sshd** - поиск по выводу через пайп
 
 `-`Выполняю команду `reboot`\
 `-`Выполняю команду `netstat -tan`
-![](/src/img/linux_8_2.png)
+![](/Linux/src/img/linux_8_2.png)
 \> **-tan**:\
 \> **-a** - Показывать состояние всех сокетов; обычно сокеты, используемые серверными процессами, не показываются.\
 \> **-n** - Показывать сетевые адреса как числа. netstat обычно показывает адреса как символы.\
@@ -182,89 +182,89 @@
 `-`PID 1311
 
 `-` **htop сортировка по PID**
-![](/src/img/linux_8_3.png)
+![](/Linux/src/img/linux_8_3.png)
 
 `-` **htop сортировка по PERCENT_CPU**
-![](/src/img/linux_8_4.png)
+![](/Linux/src/img/linux_8_4.png)
 
 `-` **htop сортировка по PERCENT_MEM**
-![](/src/img/linux_8_5.png)
+![](/Linux/src/img/linux_8_5.png)
 
 `-` **htop сортировка по TIME**
-![](/src/img/linux_8_6.png)
+![](/Linux/src/img/linux_8_6.png)
 
 `-` **htop фильтр по процессу sshd**
-![](/src/img/linux_8_7.png)
+![](/Linux/src/img/linux_8_7.png)
 
 `-` **htop поиск процесса syslog**
-![](/src/img/linux_8_8.png)
+![](/Linux/src/img/linux_8_8.png)
 
 `-` **htop с добавленным выводом hostname, clock и uptime**
-![](/src/img/linux_8_9.png)
+![](/Linux/src/img/linux_8_9.png)
 
 ## Part 10. Использование утилиты fdisc
 
 `-`Disk /dev/nvme0n1: 20 GiB 21474836480 bytes, 41943040 sectors
-![](/src/img/linux_9_1.png)
+![](/Linux/src/img/linux_9_1.png)
 
 ## Part 11. Использование утилиты df
 
 `-` Вывод команды `df`
-![](/src/img/linux_11_1.png)
+![](/Linux/src/img/linux_11_1.png)
 \>bytes
 
 `-` Вывод команды `df -Th`
-![](/src/img/linux_11_2.png)
+![](/Linux/src/img/linux_11_2.png)
 \>ext4
 
 ## Part 12. Использование утилиты du
 
 `-` Вывод команды `du`
-![](/src/img/linux_12_1.png)
+![](/Linux/src/img/linux_12_1.png)
 
 `-` **/home**
-![](/src/img/linux_12_2.png)
+![](/Linux/src/img/linux_12_2.png)
 
 `-` **/var**
-![](/src/img/linux_12_3.png)
+![](/Linux/src/img/linux_12_3.png)
 
 `-` **/var/log**
-![](/src/img/linux_12_4.png)
+![](/Linux/src/img/linux_12_4.png)
 
 `-` **/var/log/***
-![](/src/img/linux_12_5.png)
+![](/Linux/src/img/linux_12_5.png)
 
 ## Part 13. Установка и использование утилиты ncdu
 
 `-` Установка: `sudo apt install ncdu`
 
 `-` **/home**
-![](/src/img/linux_13_1.png)
+![](/Linux/src/img/linux_13_1.png)
 
 `-` **/var**
-![](/src/img/linux_13_2.png)
+![](/Linux/src/img/linux_13_2.png)
 
 `-` **/var/log**
-![](/src/img/linux_13_3.png)
+![](/Linux/src/img/linux_13_3.png)
 
 ## Part 14. Работа с системными журналами
 
 `-` Последняя авторизация
-![](/src/img/linux_14_1.png)
+![](/Linux/src/img/linux_14_1.png)
 
 `-` Перезапуск OpenSSH Server
-![](/src/img/linux_14_2.png)
+![](/Linux/src/img/linux_14_2.png)
 
 ## Part 15. Использование планировщика задач CRON
 
 `-` Создание задачи в CRON
-![](/src/img/linux_15_1.png)
+![](/Linux/src/img/linux_15_1.png)
 
 `-` Проверяем uptime каждые две минуты
-![](/src/img/linux_15_2.png)
+![](/Linux/src/img/linux_15_2.png)
 
 `-` Вывожу список всех задач CRON
-![](/src/img/linux_15_3.png)
+![](/Linux/src/img/linux_15_3.png)
 
 `-` Удаляю все задачи и проверяю список
-![](/src/img/linux_15_4.png)
+![](/Linux/src/img/linux_15_4.png)
