@@ -1,0 +1,66 @@
+default:  
+  tags: [build]  
+
+stages:  
+  - build
+  - style
+  - test
+  - deploy
+
+stage_build:  
+  stage: build  
+  tags:  
+    - build  
+  script:  
+    - rm -rf artifacts  
+    - mkdir artifacts  
+    - (cd src/cat && make clean && make all)  
+    - (cd src/grep && make clean && make all)  
+    - cp src/cat/s21_cat src/grep/s21_grep artifacts  
+  after_script:
+    - bash src/notify.sh "Build-CI"
+  artifacts:  
+    paths:  
+      - artifacts  
+    expire_in: 30 days
+  allow_failure: false
+
+stage_style:
+  stage: style
+  needs: ["stage_build"]
+  tags:
+    - style
+  script:
+    - cd src
+    - clang-format -n --Werror --verbose cat/s21_cat.c
+    - clang-format -n --Werror --verbose grep/s21_grep.c
+  after_script:
+    - bash src/notify.sh "Style-CI"
+  allow_failure: false
+
+stage_test:
+  stage: test
+  needs: ["stage_build", "stage_style"]
+  tags:
+    - test
+  script:
+    - cd src/cat
+    - make test
+    - cd ../grep
+    - make test
+  after_script:
+    - bash src/notify.sh "Test-CI"
+  when: on_success
+  allow_failure: false
+
+stage_deploy:
+  stage: deploy
+  needs: ["stage_build", "stage_style", "stage_test"]
+  tags:
+    - deploy
+  script:
+    - bash src/copy.sh
+  after_script:
+    - bash src/notify.sh "Deploy-CD"
+  when: manual
+  allow_failure: false
